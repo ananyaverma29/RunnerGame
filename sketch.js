@@ -371,8 +371,10 @@ imageMode(CENTER);
     //stoneGroup.destroy();
     birdGroup.setVelocityEach(0);
     
-if(touches.length>0) {      
-    reset();
+   
+if(touches.length>0 || mousePressedOver(restart)) {      
+    location.reload();
+   // reset();
     touches = []
   }
 }
@@ -487,7 +489,7 @@ function createBird()
     birdGroup.add(bird);
 }
 
-function reset(){
+/*function reset(){
     gameState = play;
     gameOver.visible = false;
     restart.visible = false;
@@ -497,7 +499,7 @@ function reset(){
     birdGroup.destroyEach(); 
     score = 0;
     
-  }
+  }*/
   
 /*showRank()
  {
